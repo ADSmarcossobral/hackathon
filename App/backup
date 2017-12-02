@@ -1,0 +1,81 @@
+Label { text: "Endereco:" }
+TextField {
+    id: endereco
+    width: 328
+    height: 20
+}
+
+Label { text: "Bairro:" }
+TextField {
+    id: bairro
+    width: 328
+    height: 20
+}
+
+Label { text: "municipio:" }
+TextField {
+    id: municipio
+    width: parent.width
+    height: 20
+}
+
+Label { text: "Território Identidade:" }
+TextField {
+    id: territorio
+    width: parent.width
+    height: 20
+}
+
+Label { text: "UF:" }
+TextField {
+    id: uf
+    width: parent.width
+    height: 20
+}
+
+Label { text: "CPF:" }
+TextField {
+    id: cpf
+    width: parent.width
+    height: 20
+}
+
+Label { text: "DPA:" }
+TextField {
+    id: dpa
+    width: parent.width
+    height: 20
+}
+
+Label { text: "Nome Propriedade:" }
+TextField {
+    id: nomePropriedade
+    width: parent.width
+}
+
+Label { text: "Cooperativa:" }
+TextField {
+    id: cooperativa
+    width: parent.width
+}
+
+Label { text: "OSC:" }
+TextField {
+    id: osc
+    width: parent.width
+    height: 20
+}
+
+
+onClicked: {
+    if(pwconfirm.text != pw.text){
+        showdialog("Erro!", "As senhas não conferem!")
+    }else{
+        result = SCRIPT.requestHttp("http://hackathon-cjlcarvalho.c9users.io/login", 'user='+ login.text +'&pw=' + senha.text + '&nome=' + nome.text + '&endereco=' + endereco + '&bairro=' + bairro + '&municipio=' + municipio + '&territorio=' + territorio + '&uf=' +uf + '&cpf=' + cpf + '&dap=' + dap + '&nomePropriedade' + nomePropriedade + '&cooperativa=' + cooperativa + '&osc=' + osc);
+        if (result) {
+            showdialog("OK", "Registrado com sucesso!")
+        } else {
+            showdialog("Erro!", "Não foi possível realizar o cadastro!")
+        }
+    }
+}

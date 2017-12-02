@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MainForm.ui.qml</file>
+        <file>images/arrow.png</file>
+        <file>images/drawer.png</file>
+        <file>images/menu.png</file>
+        <file>Pages/inicio.qml</file>
+        <file>images/selo01.jpeg</file>
+        <file>main.cpp</file>
+        <file>SESSION/Login.qml</file>
+        <file>SESSION/Login2.qml</file>
+        <file>javascript/script.js</file>
+        <file>Pages/cadastroProdutor.qml</file>
+        <file>oldMain.qml</file>
+        <file>MyComponent.qml</file>
+        <file>images/LogoTeia.png</file>
+        <file>Pages/login.qml</file>
+        <file>Pages/busca.qml</file>
+        <file>Pages/cadastroProduto.qml</file>
+        <file>Pages/perfilProduto.qml</file>
+        <file>Pages/perfilProdutor.qml</file>
+    </qresource>
+</RCC>
